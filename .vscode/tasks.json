@@ -36,6 +36,19 @@
                 "${workspaceFolder}/asp.net.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "go",
+            "label": "go: build package",
+            "command": "build",
+            "args": [
+                "${fileDirname}"
+            ],
+            "problemMatcher": [
+                "$go"
+            ],
+            "group": "build",
+            "detail": "cd c:\\Users\\Admin\\Desktop\\asp.net; go build ${fileDirname}"
         }
     ]
 }
