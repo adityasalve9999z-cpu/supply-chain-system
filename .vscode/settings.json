@@ -1,0 +1,8 @@
+{
+    "dotnetAcquisitionExtension.existingDotnetPath": [
+        "C:\\Program Files\\dotnet\\dotnet.exe"
+    ],
+    "terminal.integrated.env.windows": {
+        "PATH": "C:\\Program Files\\dotnet;${env:PATH}"
+    }
+}

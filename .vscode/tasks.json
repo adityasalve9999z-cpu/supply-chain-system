@@ -11,19 +11,11 @@
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
-        {
-            "label": "ReSharper: Build",
-            "command": "C:\\Program Files\\dotnet\\dotnet.exe",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/SupplyChain/SupplyChainSystem.API/SupplyChainSystem.API.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
-        }
     ]
 }
