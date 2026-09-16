@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="SupplyChainSystem.API/SupplyChainSystem.API.csproj" />
+  <Project Path="SupplyChainSystem.Application/SupplyChainSystem.Application.csproj" />
+  <Project Path="SupplyChainSystem.Core/SupplyChainSystem.Core.csproj" />
+  <Project Path="SupplyChainSystem.Infrastructure/SupplyChainSystem.Infrastructure.csproj" />
+</Solution>
