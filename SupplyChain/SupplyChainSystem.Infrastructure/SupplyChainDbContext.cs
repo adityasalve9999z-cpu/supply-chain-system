@@ -31,6 +31,12 @@ namespace SupplyChainSystem.Infrastructure.Data
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Username)
                 .IsUnique();
+            modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
+            modelBuilder.Entity<Product>().HasIndex(p => p.Sku).IsUnique();
+            modelBuilder.Entity<Role>().HasData(
+                new Role { Id = 1, Name = "Admin" },
+                new Role { Id = 2, Name = "Warehouse Manager" },
+                new Role { Id = 3, Name = "Staff" });
         }
     }
 }

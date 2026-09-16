@@ -5,6 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        },
+        {
             "name": "ReSharper: .NET Core / .NET 5+ Executable",
             "type": "coreclr",
             "request": "launch",

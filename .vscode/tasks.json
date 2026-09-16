@@ -9,46 +9,21 @@
                 "build",
                 "${workspaceFolder}/asp.net.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "publish",
+            "label": "ReSharper: Build",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "publish",
+                "build",
                 "${workspaceFolder}/asp.net.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "watch",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "watch",
-                "run",
-                "--project",
-                "${workspaceFolder}/asp.net.csproj"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "type": "go",
-            "label": "go: build package",
-            "command": "build",
-            "args": [
-                "${fileDirname}"
-            ],
-            "problemMatcher": [
-                "$go"
-            ],
-            "group": "build",
-            "detail": "cd c:\\Users\\Admin\\Desktop\\asp.net; go build ${fileDirname}"
         }
     ]
 }

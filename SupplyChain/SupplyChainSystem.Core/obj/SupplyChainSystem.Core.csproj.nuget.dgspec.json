@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\SupplyChainSystem.Core.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\SupplyChainSystem.Core.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\SupplyChainSystem.Core.csproj": {
+    "C:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\SupplyChainSystem.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\SupplyChainSystem.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\SupplyChainSystem.Core.csproj",
         "projectName": "SupplyChainSystem.Core",
-        "projectPath": "c:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\SupplyChainSystem.Core.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\SupplyChainSystem.Core.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\asp.net\\SupplyChain\\SupplyChainSystem.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
