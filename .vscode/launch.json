@@ -13,8 +13,8 @@
             "name": "ReSharper: .NET Core / .NET 5+ Executable",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Debug/net10.0/asp.net.dll",
-            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/SupplyChain/SupplyChainSystem.API/bin/Debug/net10.0/SupplyChainSystem.API.dll",
+            "cwd": "${workspaceFolder}/SupplyChain/SupplyChainSystem.API",
             "args": [],
             "env": {},
             "preLaunchTask": "ReSharper: Build"
@@ -30,9 +30,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net10.0/asp.net.dll",
+            "program": "${workspaceFolder}/SupplyChain/SupplyChainSystem.API/bin/Debug/net10.0/SupplyChainSystem.API.dll",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/SupplyChain/SupplyChainSystem.API",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",

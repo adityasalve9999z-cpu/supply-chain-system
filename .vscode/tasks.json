@@ -3,11 +3,11 @@
     "tasks": [
         {
             "label": "build",
-            "command": "dotnet",
+            "command": "C:\\Program Files\\dotnet\\dotnet.exe",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/asp.net.csproj",
+                "${workspaceFolder}/SupplyChain/SupplyChainSystem.API/SupplyChainSystem.API.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -15,11 +15,11 @@
         },
         {
             "label": "ReSharper: Build",
-            "command": "dotnet",
+            "command": "C:\\Program Files\\dotnet\\dotnet.exe",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/asp.net.csproj",
+                "${workspaceFolder}/SupplyChain/SupplyChainSystem.API/SupplyChainSystem.API.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
