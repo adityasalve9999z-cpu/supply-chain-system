@@ -7,21 +7,41 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/SupplyChain/SupplyChainSystem.API/bin/Debug/net10.0/SupplyChainSystem.API.dll",
-            "args": [],
+            "args": [
+                "--urls",
+                "http://localhost:5219"
+            ],
             "cwd": "${workspaceFolder}/SupplyChain/SupplyChainSystem.API",
             "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-            },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Flowline Frontend",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev -- --host localhost --port 5173",
+            "cwd": "${workspaceFolder}/frontend",
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "Local:\\s+(http://localhost:\\d+)"
             }
         },
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Flowline Full Stack",
+            "configurations": [
+                ".NET Core Launch (web)",
+                "Flowline Frontend"
+            ],
+            "stopAll": true
         }
     ]
 }

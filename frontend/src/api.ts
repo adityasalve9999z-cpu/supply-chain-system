@@ -1,4 +1,4 @@
-export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5080'
+export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5219'
 export type User = { userId: number; username: string; email: string; role: string; token: string }
 export type Product = { id: number; name: string; description: string; price: number; sku: string; categoryId: number }
 export type Category = { id: number; name: string; description: string }
@@ -18,4 +18,7 @@ export const api = {
   products: () => request<Product[]>('/api/catalog/products'),
   categories: () => request<Category[]>('/api/catalog/categories'),
   warehouses: () => request<Warehouse[]>('/api/catalog/warehouses'),
+  createCategory: (body: { name: string; description: string }) => request<Category>('/api/catalog/categories', { method: 'POST', body: JSON.stringify(body) }),
+  createWarehouse: (body: { name: string; location: string }) => request<Warehouse>('/api/catalog/warehouses', { method: 'POST', body: JSON.stringify(body) }),
+  createProduct: (body: { name: string; description: string; price: number; sku: string; categoryId: number }) => request<Product>('/api/catalog/products', { method: 'POST', body: JSON.stringify(body) }),
 }

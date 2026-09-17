@@ -71,6 +71,17 @@ app.Run();
 
 static async Task SeedDataAsync(SupplyChainDbContext db)
 {
+    if (!await db.Users.AnyAsync(u => u.Email == "demo.manager@example.com"))
+    {
+        db.Users.Add(new SupplyChainSystem.Core.Entities.User
+        {
+            Username = "demo.manager",
+            Email = "demo.manager@example.com",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("DemoPassword123!"),
+            RoleId = 2
+        });
+        await db.SaveChangesAsync();
+    }
     if (await db.Categories.AnyAsync()) return;
 
     var category = new SupplyChainSystem.Core.Entities.Category
