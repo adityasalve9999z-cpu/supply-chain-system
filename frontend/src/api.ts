@@ -4,6 +4,7 @@ export type Product = { id: number; name: string; description: string; price: nu
 export type Category = { id: number; name: string; description: string }
 export type Warehouse = { id: number; name: string; location: string }
 export type InventoryItem = { id: number; productId: number; productName: string; warehouseId: number; warehouseName: string; quantity: number; lowStockThreshold: number; isLowStock: boolean; lastUpdated: string }
+export type AnalysisResponse = { answer: string; generatedAtUtc: string; inventoryRecords: number; lowStockRecords: number }
 
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const token = localStorage.getItem('flowline_token')
@@ -21,4 +22,5 @@ export const api = {
   createCategory: (body: { name: string; description: string }) => request<Category>('/api/catalog/categories', { method: 'POST', body: JSON.stringify(body) }),
   createWarehouse: (body: { name: string; location: string }) => request<Warehouse>('/api/catalog/warehouses', { method: 'POST', body: JSON.stringify(body) }),
   createProduct: (body: { name: string; description: string; price: number; sku: string; categoryId: number }) => request<Product>('/api/catalog/products', { method: 'POST', body: JSON.stringify(body) }),
+  analyze: (question: string) => request<AnalysisResponse>('/api/analysis', { method: 'POST', body: JSON.stringify({ question }) }),
 }
