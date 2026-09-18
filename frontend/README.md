@@ -9,10 +9,10 @@ npm install
 npm run dev
 ```
 
-The API defaults to `http://localhost:5080`. To use another API host, create `.env.local`:
+The API defaults to `http://localhost:5219`. To use another API host, create `.env.local`:
 
 ```env
-VITE_API_URL=http://localhost:5080
+VITE_API_URL=http://localhost:5219
 ```
 
 Start the ASP.NET API separately, then open the Vite URL (normally `http://localhost:5173`). Login and registration responses persist the JWT in `localStorage` and authenticated requests send it as a Bearer token.
@@ -23,4 +23,16 @@ Start the ASP.NET API separately, then open the Vite URL (normally `http://local
 npm run build
 ```
 
-The frontend consumes `/api/auth/login`, `/api/auth/register`, `/api/inventory`, and the catalog endpoints for products, categories, and warehouses. No backend files are modified.
+The frontend consumes `/api/auth/login`, `/api/inventory`, the catalog endpoints, and `/api/analysis`.
+
+## AI inventory analysis
+
+The **AI analysis** view is a read-only assistant backed by Azure OpenAI. Configure the API process with environment variables before using it:
+
+```powershell
+$env:AzureOpenAI__Endpoint = "https://your-resource.openai.azure.com"
+$env:AzureOpenAI__Deployment = "your-chat-deployment"
+$env:AzureOpenAI__ApiKey = "use-a-secret-store-or-local-user-secret"
+```
+
+Do not put the API key in the React app, source control, or `VITE_*` variables. The backend loads the current inventory snapshot and sends it to Azure OpenAI; the agent cannot modify inventory or place orders.
