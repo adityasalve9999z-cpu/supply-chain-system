@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Http;
 using SupplyChainSystem.Application.DTOs;
 using SupplyChainSystem.Application.Interfaces;
 using SupplyChainSystem.Infrastructure.Data;
