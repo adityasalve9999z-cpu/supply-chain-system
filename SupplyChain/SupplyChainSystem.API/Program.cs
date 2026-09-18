@@ -25,8 +25,7 @@ builder.Services.AddDbContext<SupplyChainDbContext>(options =>
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
-builder.Services.AddScoped<IAnalysisService, AnalysisService>();
-builder.Services.AddHttpClient("AzureOpenAI", client => client.Timeout = TimeSpan.FromSeconds(45));
+builder.Services.AddHttpClient<IAnalysisService, AnalysisService>(client => client.Timeout = TimeSpan.FromSeconds(45));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters

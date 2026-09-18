@@ -3,7 +3,6 @@ using System.Text;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Http;
 using SupplyChainSystem.Application.DTOs;
 using SupplyChainSystem.Application.Interfaces;
 using SupplyChainSystem.Infrastructure.Data;
@@ -12,7 +11,7 @@ namespace SupplyChainSystem.Infrastructure.Services;
 
 public sealed class AnalysisService(
     SupplyChainDbContext db,
-    IHttpClientFactory httpClientFactory,
+    HttpClient client,
     IConfiguration configuration) : IAnalysisService
 {
     private static readonly JsonSerializerOptions JsonOptions = new(JsonSerializerDefaults.Web);
@@ -86,7 +85,6 @@ public sealed class AnalysisService(
             Encoding.UTF8,
             "application/json");
 
-        var client = httpClientFactory.CreateClient("AzureOpenAI");
         using var response = await client.SendAsync(message, cancellationToken);
         var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
 
